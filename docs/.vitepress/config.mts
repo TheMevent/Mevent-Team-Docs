@@ -385,6 +385,7 @@ const enSidebar = {
 export default defineConfig({
   title: 'Mevent Plugins',
   description: 'Plugin documentation for Mevent Team — Rust server plugins (Oxide / Carbon)',
+  base: '/Mevent-Team-Docs/',
 
   locales: {
     root: {

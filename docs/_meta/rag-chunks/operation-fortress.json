@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chunk-217",
+    "plugin": "operation-fortress",
+    "page": "команды",
+    "section": "Команды и права",
+    "source": "docs/plugins/operation-fortress/commands.mdx",
+    "url": "/plugins/operation-fortress/commands",
+    "content": "Команды и права\n\n Команды\n\n Команда  Описание  Право \n---------\n operation.start  Запустить событие вручную  operationfortress.start \n operation.stop  Остановить текущее событие  operationfortress.stop \n\n Права (Permissions)\n\n Право  Описание \n------\n operationfortress.start  Разрешает запуск события \n operationfortress.stop  Разрешает остановку события \n\n Механика события\n\n1. Подготовка -- объявление о начале события с обратным отсчётом\n2. Активная фаза -- игроки штурмуют крепость и активируют вышки\n3. Захват -- после активации нужного количества вышек событие завершается\n4. Награды -- победитель получает настроенные награды\n\n Блокировка команд\n\nВо время события определённые команды блокируются для участников:\n\n- tpr -- запрос телепортации\n- home -- телепортация домой\n- tpa -- принятие телепортации\n\nСписок заблокированных команд настраивается в конфигурации."
+  },
+  {
+    "id": "chunk-218",
+    "plugin": "operation-fortress",
+    "page": "настройки",
+    "section": "Конфигурация Operation Fortress",
+    "source": "docs/plugins/operation-fortress/configuration.mdx",
+    "url": "/plugins/operation-fortress/configuration",
+    "content": "Конфигурация Operation Fortress\n\nФайл конфигурации расположен по пути: oxide/config/OperationFortress.json\n\n Настройки события\n\n Параметр  По умолчанию  Описание \n---------\n enableAutoTimer  true  Автоматический запуск события по таймеру \n repeatEveryMin  120  Минимальный интервал между событиями (минуты) \n repeatEveryMax  180  Максимальный интервал между событиями (минуты) \n prepairSeconds  60  Время подготовки перед началом события (секунды) \n duration  65  Длительность события (минуты) \n towerNeedActivated  4  Количество вышек для захвата крепости \n ejectType  Out  Тип выталкивания игроков после события \n useNotify  false  Использовать Notify \n announceWinner  true  Объявлять победителя \n redSphere  true  Показывать красную сферу вокруг зоны \n createZonePVP  false  Создавать PvP-зону \n teleportationBlock  true  Блокировать телепортацию \n disableBetterNpc  true  Отключить BetterNpc в зоне события \n\n Заблокированные команды\n\n Настройки PveMode\n\n Параметр  Описание \n------\n Enable  Включить PvE-режим для зоны \n Damage  Урон игрокам (в процентах) \n ScaleDamage  Множители урона для NPC и турелей \n LootCrate  Разрешить лутать ящики \n DamageNpc  Разрешить урон NPC \n TimeExitOwner  Время до выхода владельца (секунды) \n\n Пресеты NPC\n\nКаждый пресет NPC содержит:\n\n Параметр  Описание \n------\n presetName  Уникальное имя пресета \n displayName  Отображаемое имя NPC \n health  Здоровье \n wearItems  Экипировка (список предметов со скинами) \n beltItems  Оружие (список предметов со скинами) \n speed  Скорость передвижения \n roamRange  Радиус патрулирования \n senseRange  Дальность обнаружения \n damageScale  Множитель урона \n type  Тип: Default или Stationary \n deleteCorpse  Удалять тело после смерти \n lootPreset  Пресет лута с тела \n\n Награды\n\n Параметр  Описание \n------\n Enable  Включить систему наград \n Type  Тип награды: Economy или Command \n Economy  Настройки экономической награды \n Command  Команда для выполнения ({steamid} -- ID победителя) \n\n Маркеры на карте\n\n Параметр  Опис"
+  },
+  {
+    "id": "chunk-219",
+    "plugin": "operation-fortress",
+    "page": "FAQ",
+    "section": "FAQ и решение проблем",
+    "source": "docs/plugins/operation-fortress/faq.mdx",
+    "url": "/plugins/operation-fortress/faq",
+    "content": "FAQ и решение проблем\n\n Частые вопросы\n\n 1. Как запустить событие вручную?\n\nВыполните команду operation.start из консоли или чата (с правом operationfortress.start).\n\n---\n\n 2. Как настроить автоматический запуск?\n\nВ конфигурации установите \"enableAutoTimer\": true и укажите интервал в минутах (repeatEveryMin / repeatEveryMax).\n\n---\n\n 3. Как создать пресет здания для крепости?\n\nИспользуйте RustEdit для создания пресета здания. Сохраните его с уникальным именем и добавьте в массив \"Building Presets\" в конфигурации.\n\n---\n\n 4. Сколько вышек нужно активировать для победы?\n\nКоличество задаётся параметром \"towerNeedActivated\". По умолчанию: 4.\n\n---\n\n 5. Какие награды получает победитель?\n\nНаграды настраиваются в секции \"Rewards\". Можно комбинировать экономические награды (Economics, ServerRewards) и команды (например, выдача VIP-прав).\n\n---\n\n Решение проблем\n\n Событие не запускается\n\nПричина: Пресет здания не найден на карте или NpcSpawn не установлен.\n\nРешение: Убедитесь, что пресет здания создан в RustEdit и присутствует на карте. Установите плагин NpcSpawn.\n\n---\n\n NPC не появляются\n\nПричина: Пресеты NPC настроены неправильно.\n\nРешение: Проверьте настройки пресетов NPC в конфигурации. Убедитесь, что shortname предметов экипировки и оружия корректны.\n\n---\n\n Игроки не могут войти в зону крепости\n\nПричина: PveMode блокирует вход.\n\nРешение: Проверьте настройки PveMode в конфигурации. Установите \"CanEnter\": true для разрешения входа."
+  },
+  {
+    "id": "chunk-220",
+    "plugin": "operation-fortress",
+    "page": "обзор",
+    "section": "Operation Fortress",
+    "source": "docs/plugins/operation-fortress/index.mdx",
+    "url": "/plugins/operation-fortress/",
+    "content": "Operation Fortress\n\n Что делает этот плагин?\n\nOperation Fortress добавляет на сервер масштабное PvP-событие захвата крепости. На карте появляется укреплённая база с NPC-охранниками, вышками и боссом-командором. Игроки должны активировать определённое количество вышек для захвата крепости. Победители получают награды (экономика, команды, предметы). Событие поддерживает автоматический запуск, маркеры на карте и интеграцию с PvE-системами.\n\n Ключевые возможности\n\n- Автоматический запуск события по таймеру\n- Настраиваемые пресеты NPC-охранников (экипировка, оружие, поведение)\n- Несколько типов NPC: охранники территории, снайперы на вышках, босс-командор\n- Система активации вышек для захвата крепости\n- Фаза подготовки с обратным отсчётом\n- Маркеры на карте (Vending + Radius)\n- Система наград (Economics, ServerRewards, команды)\n- Интеграция с PveMode для зон PvP/PvE\n- Блокировка телепортации и команд во время события\n- Пресеты зданий (RustEdit)\n- Объявление победителя всем игрокам\n\n Требования\n\n Зависимость  Обязательность  Описание \n---------\n NpcSpawn  Обязательно  Спавн NPC-охранников \n PveMode  По желанию  Управление PvP/PvE зонами \n Notify / UINotify  По желанию  Красивые уведомления \n BetterNpc  По желанию  Интеграция с улучшенными NPC \n AlphaLoot  По желанию  Управление лутом \n Oxide / uMod / Carbon  Обязательно  Совместим с Oxide, uMod и Carbon \n\n Быстрый старт\n\n1. Установите NpcSpawn на сервер.\n2. Скопируйте файл OperationFortress.cs в папку oxide/plugins/.\n3. Перезагрузите сервер или выполните oxide.reload OperationFortress.\n4. Настройте пресеты зданий и NPC в конфигурации.\n5. Запустите событие: operation.start."
+  },
+  {
+    "id": "chunk-221",
+    "plugin": "operation-fortress",
+    "page": "установка",
+    "section": "Установка Operation Fortress",
+    "source": "docs/plugins/operation-fortress/setup.mdx",
+    "url": "/plugins/operation-fortress/setup",
+    "content": "Установка Operation Fortress\n\n Шаг 1: Установите зависимости\n\n NpcSpawn (обязательно)\n\nПлагин NpcSpawn необходим для спавна NPC-охранников крепости.\n\n Дополнительные зависимости\n\n Плагин  Назначение \n------\n PveMode  Создание PvP-зоны вокруг крепости \n Notify / UINotify  Уведомления о событии \n BetterNpc  Улучшенное поведение NPC \n AlphaLoot  Управление лутом в контейнерах \n MonumentOwner  Интеграция с системой монументов \n MultiEvents  Управление несколькими событиями \n\n Шаг 2: Установите плагин\n\n1. Скопируйте файл OperationFortress.cs в папку oxide/plugins/.\n2. Плагин загрузится автоматически.\n\nФайл конфигурации:\n\n Шаг 3: Настройте пресеты зданий\n\nВ конфигурации добавьте имена пресетов зданий (созданных в RustEdit) в массив \"Building Presets\":\n\n Шаг 4: Настройте NPC\n\nКонфигурация содержит пресеты NPC с настройками:\n\n- TerritoryGuard -- охранники территории\n- ReinforcementSoldier -- подкрепление\n- MainGuard -- главные охранники\n- TowerGuard -- снайперы на вышках\n- BossCommandor -- босс-командор (3000 HP)\n\nКаждый пресет настраивается отдельно: здоровье, экипировка, оружие, скорость, дальность обнаружения и др.\n\n Шаг 5: Настройте событие\n\n Шаг 6: Проверьте работу\n\nЗапустите событие вручную:\n\nДля остановки:\n\n Шаг 7: Перезагрузите плагин"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chunk-212",
+    "plugin": "object-stacks",
+    "page": "команды",
+    "section": "Команды и права",
+    "source": "docs/plugins/object-stacks/commands.mdx",
+    "url": "/plugins/object-stacks/commands",
+    "content": "Команды и права\n\n Команды\n\nУ плагина Object Stacks нет чат-команд. Стакание объектов выполняется через игровую механику:\n\n1. Возьмите размещаемый объект в руки.\n2. Наведите прицел на уже установленный объект того же типа.\n3. Нажмите правую кнопку мыши (ПКМ).\n4. Новый объект будет установлен поверх существующего.\n\n Права (Permissions)\n\nПрава определяют максимальное количество объектов в стопке. Формат: objectstacks.[shortname].[уровень].\n\n Стандартные права\n\n Право  Макс. стопка \n------\n objectstacks.storagebarrelb.use  2 \n objectstacks.storagebarrelb.vip  4 \n objectstacks.storagebarrelc.use  2 \n objectstacks.storagebarrelc.vip  4 \n objectstacks.composter.use  2 \n objectstacks.composter.vip  4 \n objectstacks.boxwooden.use  2 \n objectstacks.boxwooden.vip  4 \n objectstacks.boxwoodenlarge.use  2 \n objectstacks.boxwoodenlarge.vip  4 \n objectstacks.coffinstorage.use  2 \n objectstacks.coffinstorage.vip  4 \n objectstacks.electricgeneratorsmall.use  2 \n objectstacks.electricgeneratorsmall.vip  4 \n objectstacks.electricfurnace.use  2 \n objectstacks.electricfurnace.vip  4 \n objectstacks.electricbatteryrechargablelarge.use  2 \n objectstacks.electricbatteryrechargablelarge.vip  4 \n\n Пример настройки прав\n\nИгрок с правом objectstacks.boxwooden.use сможет ставить максимум 2 ящика в стопку. С правом objectstacks.boxwooden.vip -- максимум 4."
+  },
+  {
+    "id": "chunk-213",
+    "plugin": "object-stacks",
+    "page": "настройки",
+    "section": "Конфигурация Object Stacks",
+    "source": "docs/plugins/object-stacks/configuration.mdx",
+    "url": "/plugins/object-stacks/configuration",
+    "content": "Конфигурация Object Stacks\n\nФайл конфигурации расположен по пути: oxide/config/ObjectStacks.json\n\n Основные параметры\n\n Параметр  По умолчанию  Описание \n---------\n Logging level  None  Уровень логирования: None, File, Console, All \n Can stack only in Building Privileged zones?  true  Ограничить стакание зоной шкафа (TC) \n Blacklisted Skins  [123, 1223]  Скины, запрещённые для стакания \n\n Права и лимиты (Permissions)\n\nСловарь \"Permissions & their amount\" определяет максимальное количество объектов в стопке для каждого права:\n\nФормат ключа: objectstacks.[shortname].[уровень]\n\nПри наличии нескольких прав применяется наибольший лимит.\n\n Объекты и смещения (Objects and offsets)\n\nСловарь \"Objects and offsets\" определяет, какие объекты можно стакать и вертикальное смещение для каждого:\n\n Поле  Описание \n------\n Ключ (путь к префабу)  Путь к префабу размещаемого объекта \n YOffset  Вертикальное смещение при стакании (в метрах) \n Shortname for permissions  Имя для формирования прав доступа \n\n Поддерживаемые объекты по умолчанию\n\n- Деревянные ящики (boxwooden, boxwoodenlarge)\n- Бочки хранения (storagebarrelb, storagebarrelc)\n- Компостер (composter)\n- Электрическая печь (electricfurnace)\n- Генераторы (electricgeneratorsmall, electricfuelgeneratorsmall)\n- Батареи (малые, средние, большие)\n- Гроб (coffinstorage)\n- Средневековые ящики\n- Бамбуковые и плетёные бочки\n- DLC-контейнеры (Abyss)"
+  },
+  {
+    "id": "chunk-214",
+    "plugin": "object-stacks",
+    "page": "FAQ",
+    "section": "FAQ и решение проблем",
+    "source": "docs/plugins/object-stacks/faq.mdx",
+    "url": "/plugins/object-stacks/faq",
+    "content": "FAQ и решение проблем\n\n Частые вопросы\n\n 1. Как стакать объекты?\n\nВозьмите размещаемый объект в руки, наведите прицел на уже установленный объект того же типа и нажмите правую кнопку мыши (ПКМ).\n\n---\n\n 2. Как добавить поддержку нового объекта?\n\nВ конфигурации добавьте новую запись в секцию \"Objects and offsets\". Укажите путь к префабу объекта, вертикальное смещение (YOffset) и shortname для прав. Затем добавьте права в секцию \"Permissions\".\n\n---\n\n 3. Как увеличить максимальное количество объектов в стопке?\n\nДобавьте новое право в секцию \"Permissions\" с нужным лимитом. Например: \"objectstacks.boxwooden.premium\": 8. Затем выдайте это право нужной группе.\n\n---\n\n 4. Работает ли стакание на буксире (Tugboat)?\n\nДа. Плагин поддерживает размещение стопок на буксирах. Объекты привязываются к буксиру как дочерние элементы.\n\n---\n\n 5. Можно ли запретить стакание объектов с определённым скином?\n\nДа. Добавьте ID скина в массив \"Blacklisted Skins\" в конфигурации.\n\n---\n\n Решение проблем\n\n Сообщение \"Building blocked!\"\n\nПричина: Игрок находится вне зоны шкафа, а параметр \"Can stack only in Building Privileged zones?\" установлен в true.\n\nРешение: Разместите шкаф и авторизуйтесь в нём, или установите параметр в false.\n\n---\n\n Сообщение \"You reached max limit of stackable objects\"\n\nПричина: Игрок достиг максимального количества объектов в стопке для своего права.\n\nРешение: Выдайте игроку право с большим лимитом.\n\n---\n\n Объект не стакается\n\nПричина: Объект не добавлен в список поддерживаемых, или у игрока нет права на стакание этого типа объектов.\n\nРешение: Проверьте, что объект есть в \"Objects and offsets\" и соответствующее право выдано игроку."
+  },
+  {
+    "id": "chunk-215",
+    "plugin": "object-stacks",
+    "page": "обзор",
+    "section": "Object Stacks",
+    "source": "docs/plugins/object-stacks/index.mdx",
+    "url": "/plugins/object-stacks/",
+    "content": "Object Stacks\n\n Что делает этот плагин?\n\nObject Stacks позволяет игрокам ставить размещаемые объекты (ящики, бочки, генераторы, печи, батареи и др.) друг на друга, создавая вертикальные стопки. Игрок смотрит на уже размещённый объект и нажимает правую кнопку мыши с таким же предметом в руках -- новый объект ставится поверх существующего. Максимальное количество объектов в стопке определяется правами доступа.\n\n Ключевые возможности\n\n- Стакание объектов друг на друга правой кнопкой мыши\n- Настраиваемый список поддерживаемых объектов с индивидуальными смещениями\n- Система прав для ограничения количества объектов в стопке\n- Ограничение стакания только в зоне шкафа (TC)\n- Чёрный список скинов для запрета стакания определённых объектов\n- Работа на буксирах (Tugboat)\n- Автоматическое отслеживание стабильности и столкновений\n- Логирование в консоль и файл\n\n Требования\n\n Зависимость  Обязательность  Описание \n---------\n Oxide / uMod / Carbon  Обязательно  Совместим с Oxide, uMod и Carbon \n\n Быстрый старт\n\n1. Скопируйте файл ObjectStacks.cs в папку oxide/plugins/.\n2. Перезагрузите сервер или выполните oxide.reload ObjectStacks.\n3. Выдайте право для стакания: oxide.grant group default objectstacks.boxwooden.use.\n4. Возьмите ящик в руки, наведите на размещённый ящик и нажмите правую кнопку мыши."
+  },
+  {
+    "id": "chunk-216",
+    "plugin": "object-stacks",
+    "page": "установка",
+    "section": "Установка Object Stacks",
+    "source": "docs/plugins/object-stacks/setup.mdx",
+    "url": "/plugins/object-stacks/setup",
+    "content": "Установка Object Stacks\n\n Шаг 1: Установите плагин\n\n1. Скопируйте файл ObjectStacks.cs в папку oxide/plugins/.\n2. Плагин загрузится автоматически.\n\nФайл конфигурации:\n\n Шаг 2: Настройте права доступа\n\nКаждый объект имеет свои права, определяющие максимальное количество в стопке:\n\nФормат права: objectstacks.[shortname].[уровень]\n\n Примеры прав по умолчанию\n\n Право  Макс. стопка \n------\n objectstacks.boxwooden.use  2 \n objectstacks.boxwooden.vip  4 \n objectstacks.boxwoodenlarge.use  2 \n objectstacks.boxwoodenlarge.vip  4 \n objectstacks.electricfurnace.use  2 \n objectstacks.electricfurnace.vip  4 \n\n Шаг 3: Проверьте работу\n\n1. Зайдите на сервер с нужным правом.\n2. Разместите деревянный ящик.\n3. Возьмите ещё один ящик в руки.\n4. Наведите прицел на размещённый ящик.\n5. Нажмите правую кнопку мыши -- ящик поставится сверху.\n\n Шаг 4: Настройте конфигурацию\n\nОткройте oxide/config/ObjectStacks.json:\n\n- Can stack only in Building Privileged zones? -- ограничить стакание только зоной шкафа\n- Blacklisted Skins -- скины, запрещённые для стакания\n- Permissions & their amount -- права и лимиты стопок\n- Objects and offsets -- список объектов с вертикальными смещениями\n\n Шаг 5: Перезагрузите плагин"
+  }
+]

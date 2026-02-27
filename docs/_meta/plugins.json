@@ -1,0 +1,526 @@
+{
+  "plugins": [
+    {
+      "id": "auto-recycler",
+      "filename": "Plugins/AutoRecycler/AutoRecycler.cs",
+      "class": "AutoRecycler",
+      "version": "1.0.10",
+      "author": "M&B-Studios & Mevent",
+      "description": "Система автоматической переработки предметов с интерфейсом управления"
+    },
+    {
+      "id": "bank-system",
+      "filename": "Plugins/BankSystem/BankSystem.cs",
+      "class": "BankSystem",
+      "version": "1.3.16",
+      "author": "Mevent",
+      "description": "Игровая банковская система с интерфейсом, счетами и интеграцией экономики"
+    },
+    {
+      "id": "battlepass",
+      "filename": "Plugins/Battlepass/Battlepass.cs",
+      "class": "Battlepass",
+      "version": "1.37.3",
+      "author": "Mevent",
+      "description": "Система боевого пропуска с миссиями, наградами и уровнями"
+    },
+    {
+      "id": "capture-zone",
+      "filename": "Plugins/CaptureZone/CaptureZone.cs",
+      "class": "CaptureZone",
+      "version": "1.1.4",
+      "author": "Mevent",
+      "description": "Система захвата территорий с зонами контроля и интеграцией кланов"
+    },
+    {
+      "id": "car-sharing",
+      "filename": "Plugins/CarSharing/CarSharing.cs",
+      "class": "CarSharing",
+      "version": "1.1.7",
+      "author": "Mevent",
+      "description": "Система аренды транспорта со спидометром и механиками совместного использования"
+    },
+    {
+      "id": "cases",
+      "filename": "Plugins/Cases/Cases.cs",
+      "class": "Cases",
+      "version": "2.0.0",
+      "author": "Mevent",
+      "description": "Система кейсов с анимацией открытия и интерфейсом"
+    },
+    {
+      "id": "clans",
+      "filename": "Plugins/Clans/Clans.cs",
+      "class": "Clans",
+      "version": "1.1.55",
+      "author": "Mevent",
+      "description": "Полноценная клановая система с войнами, территориями и социальными функциями",
+      "companions": ["ClansConverter", "ClansTop"]
+    },
+    {
+      "id": "coin-flipping",
+      "filename": "Plugins/CoinFlipping/CoinFlipping.cs",
+      "class": "CoinFlipping",
+      "version": "1.0.10",
+      "author": "Mevent",
+      "description": "Игра в подбрасывание монетки для одиночных и командных ставок"
+    },
+    {
+      "id": "crafts",
+      "filename": "Plugins/Crafts/Crafts.cs",
+      "class": "Crafts",
+      "version": "2.10.23",
+      "author": "Mevent",
+      "description": "Пользовательские рецепты крафта с интерфейсом и спавном транспорта"
+    },
+    {
+      "id": "daily-rewards",
+      "filename": "Plugins/DailyRewards/DailyRewards.cs",
+      "class": "DailyRewards",
+      "version": "1.1.9",
+      "author": "Mevent",
+      "description": "Система ежедневных наград за вход с отслеживанием AFK и блокировкой после вайпа"
+    },
+    {
+      "id": "events-manager",
+      "filename": "Plugins/EventManager/EventsManager.cs",
+      "class": "EventsManager",
+      "version": "3.3.14",
+      "author": "Mevent & Qbis",
+      "description": "Менеджер серверных ивентов с расписанием и интерфейсом",
+      "companions": ["EventsManagerNotifier", "EventsManagerConverter"]
+    },
+    {
+      "id": "f1-item-menu",
+      "filename": "Plugins/F1ItemMenu/F1ItemMenu.cs",
+      "class": "F1ItemMenu",
+      "version": "1.1.1",
+      "author": "M&B-Studios & Mevent",
+      "description": "Меню быстрого доступа к предметам через клавишу F1"
+    },
+    {
+      "id": "genie",
+      "filename": "Plugins/Genie/Genie.cs",
+      "class": "Genie",
+      "version": "1.1.0",
+      "author": "Mevent",
+      "description": "Система выдачи желаний и предметов с интерфейсом"
+    },
+    {
+      "id": "helpful-supply",
+      "filename": "Plugins/HelpfulSupply/HelpfulSupply.cs",
+      "class": "HelpfulSupply",
+      "version": "1.0.17",
+      "author": "Mevent",
+      "description": "Настройка снабжения — кастомизация аирдропов и грузовых самолётов"
+    },
+    {
+      "id": "hit-markers",
+      "filename": "Plugins/HitMarkers/HitMarkers.cs",
+      "class": "HitMarkers",
+      "version": "1.2.3",
+      "author": "Mevent",
+      "description": "Система визуальной обратной связи при попадании с маркерами урона"
+    },
+    {
+      "id": "kits",
+      "filename": "Plugins/Kits/Kits.cs",
+      "class": "Kits",
+      "version": "2.2.32",
+      "author": "Mevent",
+      "description": "Настраиваемые наборы предметов для игроков с кулдаунами и интерфейсом"
+    },
+    {
+      "id": "linking-system",
+      "filename": "Plugins/LinkingSystem/LinkingSystem.cs",
+      "class": "LinkingSystem",
+      "version": "1.1.5",
+      "author": "Mevent & Qbis",
+      "description": "Привязка аккаунтов Discord и других сервисов к игровым аккаунтам",
+      "companions": ["LinkingSystemConverter"]
+    },
+    {
+      "id": "multi-events",
+      "filename": "Plugins/MultiEvents/MultiEvents.cs",
+      "class": "MultiEvents",
+      "version": "2.4.6",
+      "author": "Mevent & Qbis",
+      "description": "Платформа для проведения серверных ивентов с 22+ режимами и таблицами лидеров",
+      "companions": ["MultiEventsInventory", "MultiEventsLeaderboard"]
+    },
+    {
+      "id": "multi-events-king-of-hill",
+      "filename": "Plugins/MultiEvents/MultiEventsKingOfHill.cs",
+      "class": "MultiEventsKingOfHill",
+      "version": "1.0.2",
+      "author": "Mevent",
+      "description": "Режим «Царь горы» — удерживай точку дольше всех"
+    },
+    {
+      "id": "multi-events-looking-loot",
+      "filename": "Plugins/MultiEvents/MultiEventsLookingLoot.cs",
+      "class": "MultiEventsLookingLoot",
+      "version": "1.0.2",
+      "author": "Mevent",
+      "description": "Режим «Поиск лута» — находи ящики быстрее соперников"
+    },
+    {
+      "id": "multi-events-collection-resources",
+      "filename": "Plugins/MultiEvents/MultiEventsCollectionResources.cs",
+      "class": "MultiEventsCollectionResources",
+      "version": "1.0.5",
+      "author": "Mevent",
+      "description": "Режим «Сбор ресурсов» — кто соберёт больше за время ивента"
+    },
+    {
+      "id": "multi-events-foundation-drop",
+      "filename": "Plugins/MultiEvents/MultiEventsFoundationDrop.cs",
+      "class": "MultiEventsFoundationDrop",
+      "version": "1.1.5",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Падающие платформы» — не упади с разрушающихся оснований"
+    },
+    {
+      "id": "multi-events-special-cargo",
+      "filename": "Plugins/MultiEvents/MultiEventsSpecialCargo.cs",
+      "class": "MultiEventsSpecialCargo",
+      "version": "1.0.3",
+      "author": "Mevent",
+      "description": "Режим «Специальный груз» — захват и доставка особого груза"
+    },
+    {
+      "id": "multi-events-hunt-animal",
+      "filename": "Plugins/MultiEvents/MultiEventsHuntAnimal.cs",
+      "class": "MultiEventsHuntAnimal",
+      "version": "1.0.3",
+      "author": "Mevent",
+      "description": "Режим «Охота на животных» — охоться на указанных животных"
+    },
+    {
+      "id": "multi-events-helicopter-pet",
+      "filename": "Plugins/MultiEvents/MultiEventsHelicopterPet.cs",
+      "class": "MultiEventsHelicopterPet",
+      "version": "1.1.1",
+      "author": "Mevent",
+      "description": "Режим «Вертолёт» — бой с патрульным вертолётом"
+    },
+    {
+      "id": "multi-events-barrel-event",
+      "filename": "Plugins/MultiEvents/Expansion Packs/1/MultiEventsBarrelEvent.cs",
+      "class": "MultiEventsBarrelEvent",
+      "version": "1.0.2",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Бочки» — разбивай бочки быстрее всех"
+    },
+    {
+      "id": "multi-events-npc-missile-silo",
+      "filename": "Plugins/MultiEvents/Expansion Packs/1/MultiEventsNpcMissileSilo.cs",
+      "class": "MultiEventsNpcMissileSilo",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Ракетная шахта» — штурм ракетной шахты с NPC"
+    },
+    {
+      "id": "multi-events-player-battle",
+      "filename": "Plugins/MultiEvents/Expansion Packs/1/MultiEventsPlayerBattle.cs",
+      "class": "MultiEventsPlayerBattle",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Битва игроков» — PvP-арена для игроков"
+    },
+    {
+      "id": "multi-events-vehicle-hunter",
+      "filename": "Plugins/MultiEvents/Expansion Packs/1/MultiEventsVehicleHunter.cs",
+      "class": "MultiEventsVehicleHunter",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Охотник на транспорт» — уничтожай транспорт"
+    },
+    {
+      "id": "multi-events-pumpkin-picker",
+      "filename": "Plugins/MultiEvents/Expansion Packs/1/MultiEventsPumpkinPicker.cs",
+      "class": "MultiEventsPumpkinPicker",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Сбор тыкв» — собирай тыквы быстрее всех"
+    },
+    {
+      "id": "multi-events-bot-purge",
+      "filename": "Plugins/MultiEvents/Expansion Packs/2/MultiEventsBotPurge.cs",
+      "class": "MultiEventsBotPurge",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Зачистка ботов» — уничтожай NPC-ботов"
+    },
+    {
+      "id": "multi-events-npc-excavator",
+      "filename": "Plugins/MultiEvents/Expansion Packs/2/MultiEventsNpcExcavator.cs",
+      "class": "MultiEventsNpcExcavator",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Экскаватор» — штурм экскаватора с NPC"
+    },
+    {
+      "id": "multi-events-hemp-gather",
+      "filename": "Plugins/MultiEvents/Expansion Packs/2/MultiEventsHempGather.cs",
+      "class": "MultiEventsHempGather",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Сбор конопли» — собирай коноплю быстрее всех"
+    },
+    {
+      "id": "multi-events-bow-master",
+      "filename": "Plugins/MultiEvents/Expansion Packs/2/MultiEventsBowMaster.cs",
+      "class": "MultiEventsBowMaster",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Мастер лука» — PvP только с луками"
+    },
+    {
+      "id": "multi-events-scavenger-hunt",
+      "filename": "Plugins/MultiEvents/Expansion Packs/2/MultiEventsScavengerHunt.cs",
+      "class": "MultiEventsScavengerHunt",
+      "version": "1.0.2",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Охота за сокровищами» — найди все спрятанные предметы"
+    },
+    {
+      "id": "multi-events-corn-collector",
+      "filename": "Plugins/MultiEvents/Expansion Packs/3/MultiEventsCornCollector.cs",
+      "class": "MultiEventsCornCollector",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Сбор кукурузы» — собирай кукурузу быстрее всех"
+    },
+    {
+      "id": "multi-events-mushroom-madness",
+      "filename": "Plugins/MultiEvents/Expansion Packs/3/MultiEventsMushroomMadness.cs",
+      "class": "MultiEventsMushroomMadness",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Грибное безумие» — собирай грибы быстрее всех"
+    },
+    {
+      "id": "multi-events-gold-rush",
+      "filename": "Plugins/MultiEvents/Expansion Packs/3/MultiEventsGoldRush.cs",
+      "class": "MultiEventsGoldRush",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Золотая лихорадка» — добывай золото быстрее всех"
+    },
+    {
+      "id": "multi-events-npc-underwater-lab",
+      "filename": "Plugins/MultiEvents/Expansion Packs/3/MultiEventsNpcUnderwaterLab.cs",
+      "class": "MultiEventsNpcUnderwaterLab",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Подводная лаборатория» — штурм подводной лаборатории с NPC"
+    },
+    {
+      "id": "multi-events-patrol-helicopter-hit",
+      "filename": "Plugins/MultiEvents/Expansion Packs/3/MultiEventsPatrolHelicopterHit.cs",
+      "class": "MultiEventsPatrolHelicopterHit",
+      "version": "1.0.0",
+      "author": "Mevent & Qbis",
+      "description": "Режим «Попади в вертолёт» — наноси урон патрульному вертолёту"
+    },
+    {
+      "id": "necronomicon",
+      "filename": "Plugins/Necronomicon/Necronomicon.cs",
+      "class": "Necronomicon",
+      "version": "1.0.12",
+      "author": "Mevent",
+      "description": "Система исследований и прогрессии технологий с интерфейсом стола исследований"
+    },
+    {
+      "id": "notify",
+      "filename": "Plugins/Notify/Notify.cs",
+      "class": "Notify",
+      "version": "1.0.14",
+      "author": "Mevent",
+      "description": "Система уведомлений для отображения сообщений игрокам"
+    },
+    {
+      "id": "object-stacks",
+      "filename": "Plugins/ObjectStacks/ObjectStacks.cs",
+      "class": "ObjectStacks",
+      "version": "1.2.3",
+      "author": "M&B-Studios & Mevent",
+      "description": "Система стакирования и комбинирования игровых объектов"
+    },
+    {
+      "id": "operation-fortress",
+      "filename": "Plugins/OperationFortress/OperationFortress.cs",
+      "class": "OperationFortress",
+      "version": "1.1.0",
+      "author": "Mevent & Qbis",
+      "description": "Комплексная система подземелий и крепостных ивентов с NPC-охраной",
+      "companions": ["NpcSpawn", "PveMode", "RustEditConvertor"]
+    },
+    {
+      "id": "panel-system",
+      "filename": "Plugins/PanelSystem/PanelSystem.cs",
+      "class": "PanelSystem",
+      "version": "1.2.2",
+      "author": "Mevent",
+      "description": "Базовая система интерфейсных панелей — фреймворк для UI-элементов"
+    },
+    {
+      "id": "player-list",
+      "filename": "Plugins/PlayerList/PlayerList.cs",
+      "class": "PlayerList",
+      "version": "2.0.5",
+      "author": "Mevent",
+      "description": "Интерфейс со списком игроков на сервере в реальном времени"
+    },
+    {
+      "id": "portal-system",
+      "filename": "Plugins/FriendsPlugins/PortalSystem.cs",
+      "class": "PortalSystem",
+      "version": "1.2.0",
+      "author": "Meowhuh & PapiRusty",
+      "description": "Система порталов для телепортации игроков между точками"
+    },
+    {
+      "id": "quarry-levels",
+      "filename": "Plugins/QuarryLevels/QuarryLevels.cs",
+      "class": "QuarryLevels",
+      "version": "2.2.0",
+      "author": "Death & Mevent & Qbis",
+      "description": "Система прокачки карьеров и добывающего оборудования"
+    },
+    {
+      "id": "referrals",
+      "filename": "Plugins/Referrals/Referrals.cs",
+      "class": "Referrals",
+      "version": "1.3.4",
+      "author": "Mevent",
+      "description": "Реферальная система — награды за приглашение новых игроков"
+    },
+    {
+      "id": "server-panel",
+      "filename": "Plugins/ServerPanel/ServerPanel.cs",
+      "class": "ServerPanel",
+      "version": "0.0.0",
+      "author": "Mevent",
+      "description": "Главная панель управления сервером с интерфейсом администратора",
+      "companions": ["ServerPanelInstaller", "ServerPanelMigrations", "ServerPanelPopUps", "ServerPanelMeventTools"]
+    },
+    {
+      "id": "servers",
+      "filename": "Plugins/Servers/Servers.cs",
+      "class": "Servers",
+      "version": "1.0.7",
+      "author": "Mevent & Qbis",
+      "description": "Отображение информации о нескольких серверах в одном интерфейсе"
+    },
+    {
+      "id": "shop",
+      "filename": "Plugins/Shop/Shop.cs",
+      "class": "Shop",
+      "version": "2.4.12",
+      "author": "Mevent",
+      "description": "Игровой магазин с категориями, корзиной и интеграцией экономики",
+      "companions": ["ShopConverter", "ShopMeventTools"]
+    },
+    {
+      "id": "skills",
+      "filename": "Plugins/Skills/Skills.cs",
+      "class": "Skills",
+      "version": "2.1.3",
+      "author": "Mevent",
+      "description": "Система прокачки навыков персонажа с деревом умений и интерфейсом",
+      "companions": ["SkillsConverter"]
+    },
+    {
+      "id": "skip-night",
+      "filename": "Plugins/SkipNight/SkipNight.cs",
+      "class": "SkipNight",
+      "version": "1.1.4",
+      "author": "Mevent",
+      "description": "Голосование за пропуск ночи с интерфейсом и управлением циклом дня"
+    },
+    {
+      "id": "stacks",
+      "filename": "Plugins/Stacks/Stacks.cs",
+      "class": "Stacks",
+      "version": "1.5.20",
+      "author": "Mevent",
+      "description": "Управление размерами стаков предметов с категориями и интерфейсом"
+    },
+    {
+      "id": "statistics",
+      "filename": "Plugins/Statistics/Statistics.cs",
+      "class": "Statistics",
+      "version": "2.0.3",
+      "author": "Mevent & Qbis",
+      "description": "Отслеживание статистики игроков с таблицами лидеров и интерфейсом"
+    },
+    {
+      "id": "ultimate-cars",
+      "filename": "Plugins/UltimateCars/UltimateCars.cs",
+      "class": "UltimateCars",
+      "version": "1.0.0",
+      "author": "Mevent",
+      "description": "Продвинутая система управления транспортом с физикой Unity"
+    },
+    {
+      "id": "ultimate-cases",
+      "filename": "Plugins/UltimateCases/UltimateCases.cs",
+      "class": "UltimateCases",
+      "version": "1.0.15",
+      "author": "Mevent",
+      "description": "Продвинутая система лут-кейсов с анимациями и настраиваемыми наградами",
+      "companions": ["UltimateCasesConverter"]
+    },
+    {
+      "id": "ultimate-leaderboard",
+      "filename": "Plugins/UltimateLeaderboard/UltimateLeaderboard.cs",
+      "class": "UltimateLeaderboard",
+      "version": "1.5.35",
+      "author": "Mevent",
+      "description": "Система таблиц лидеров с рейтингами, статистикой и наградами за топ-позиции",
+      "companions": ["UltimateLeaderboardTop"]
+    },
+    {
+      "id": "ultimate-trade",
+      "filename": "Plugins/UltimateTrade/UltimateTrade.cs",
+      "class": "UltimateTrade",
+      "version": "1.0.0",
+      "author": "Mevent",
+      "description": "Безопасная система обмена предметами между игроками с интерфейсом"
+    },
+    {
+      "id": "vehicle-buy",
+      "filename": "Plugins/VehicleBuy/VehicleBuy.cs",
+      "class": "VehicleBuy",
+      "version": "2.2.8",
+      "author": "M&B-Studios & Mevent",
+      "description": "Система покупки транспорта за игровую валюту"
+    },
+    {
+      "id": "virtual-recycler",
+      "filename": "Plugins/VirtualRecycler/VirtualRecycler.cs",
+      "class": "VirtualRecycler",
+      "version": "1.0.7",
+      "author": "M&B-Studios & Mevent",
+      "description": "Виртуальная переработка предметов без физического рециклера"
+    },
+    {
+      "id": "wipe-block",
+      "filename": "Plugins/WipeBlock/WipeBlock.cs",
+      "class": "WipeBlock",
+      "version": "2.1.7",
+      "author": "Mevent",
+      "description": "Блокировка предметов и рецептов после вайпа с таймерами разблокировки"
+    },
+    {
+      "id": "wipe-schedule",
+      "filename": "Plugins/WipeSchedule/WipeSchedule.cs",
+      "class": "WipeSchedule",
+      "version": "2.0.19",
+      "author": "Mevent",
+      "description": "Расписание вайпов с обратным отсчётом и интерфейсом для игроков"
+    }
+  ]
+}

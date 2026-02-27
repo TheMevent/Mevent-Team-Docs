@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chunk-237",
+    "plugin": "quarry-levels",
+    "page": "команды",
+    "section": "Команды и права",
+    "source": "docs/plugins/quarry-levels/commands.mdx",
+    "url": "/plugins/quarry-levels/commands",
+    "content": "Команды и права\n\n Консольные команды\n\n Команда  Описание \n------\n ql reload  Перезагрузить конфигурацию без перезапуска плагина \n\n Управление через интерфейс\n\nВзаимодействие с системой прокачки осуществляется через визуальный интерфейс при открытии карьера/насосной:\n\n Действие  Описание \n------\n Кнопка \"Upgrade\"  Открыть панель информации об уровне \n Кнопка \"Confirm Upgrade\"  Подтвердить улучшение (зелёная кнопка) \n Кнопка \"Cancel\"  Отменить и вернуться (красная кнопка) \n\n Информация в панели\n\n- Текущий уровень и максимальный уровень\n- Производительность (Production), скорость обработки (Process Rate)\n- Ёмкость хоппера (Capacity)\n- Расход топлива (Fuel Consumption)\n- Ресурсы текущего уровня и следующего уровня\n\n Права (Permissions)\n\n Право  Описание \n------\n quarrylevels.use  Разрешает использование системы прокачки карьеров и насосных \n\n Стоимость улучшения\n\nПо умолчанию для улучшения требуется:\n- Карьер: 1 предмет Mining Quarry\n- Насосная: 1 предмет Pumpjack\n\nАльтернативно можно настроить оплату через:\n- Economics -- снятие валюты с баланса\n- ServerRewards -- снятие очков наград"
+  },
+  {
+    "id": "chunk-238",
+    "plugin": "quarry-levels",
+    "page": "настройки",
+    "section": "Конфигурация Quarry Levels",
+    "source": "docs/plugins/quarry-levels/configuration.mdx",
+    "url": "/plugins/quarry-levels/configuration",
+    "content": "Конфигурация Quarry Levels\n\nФайл конфигурации расположен по пути: oxide/config/QuarryLevels.json\n\n Настройки сервера (Server Settings)\n\n Параметр  По умолчанию  Описание \n---------\n Chat icon ID  0  ID аватара для сообщений в чате \n\n Настройки уровней (Quarry Level Settings)\n\n Параметр  По умолчанию  Описание \n---------\n Quarry max level  5  Максимальный уровень карьера \n Pumpjack max level  5  Максимальный уровень насосной \n Quarry capacity per level  5  Прибавка слотов хоппера за уровень \n Pumpjack capacity per level  5  Прибавка слотов за уровень (насосная) \n Enable Economics?  false  Использовать Economics для оплаты \n Economics cost  5000  Стоимость улучшения (Economics) \n Economics currency  credits  Валюта Economics \n Enable ServerRewards?  false  Использовать ServerRewards для оплаты \n ServerRewards cost  5000  Стоимость улучшения (ServerRewards) \n ServerRewards currency  RP  Валюта ServerRewards \n\n Настройки ресурсов (Deposit Settings)\n\n Параметр  По умолчанию  Описание \n---------\n Metal ore unlock at  3  Уровень разблокировки металлической руды \n Sulfure ore unlock at  4  Уровень разблокировки серной руды \n HQM ore unlock at  5  Уровень разблокировки HQM руды \n\n Настройки производительности (Quarry Production Settings)\n\n Параметр  Описание \n------\n Stones Production  Производительность камня \n Metal Production  Производительность металлической руды \n Sulfur Production  Производительность серной руды \n HQM Production  Производительность HQM руды \n Oil Production  Производительность нефти (насосная) \n\n Настройки топлива (Quarry Options)\n\n Параметр  Описание \n------\n ProcessRateDissel  Скорость обработки на дизеле \n WorkPointDissel  Рабочие очки на дизеле \n ProcessRateFuel  Скорость обработки на Low Grade Fuel \n WorkPointFuel  Рабочие очки на Low Grade Fuel \n\n Настройки игроков (Player Settings)\n\n Параметр  По умолчанию  Описание \n---------\n Can an unauthorized player toggling?  false  Запретить неавторизованным переключать карьер \n Can an unauthorized player"
+  },
+  {
+    "id": "chunk-239",
+    "plugin": "quarry-levels",
+    "page": "FAQ",
+    "section": "FAQ и решение проблем",
+    "source": "docs/plugins/quarry-levels/faq.mdx",
+    "url": "/plugins/quarry-levels/faq",
+    "content": "FAQ и решение проблем\n\n Частые вопросы\n\n 1. Как улучшить карьер?\n\nОткройте карьер (E), нажмите кнопку \"Upgrade\", посмотрите информацию о следующем уровне и нажмите \"Confirm\". Для улучшения нужен 1 карьер в инвентаре или валюта (если настроено).\n\n---\n\n 2. Какие ресурсы разблокируются на разных уровнях?\n\nПо умолчанию: камень -- с 1 уровня, металлическая руда -- с 3 уровня, серная руда -- с 4 уровня, HQM руда -- с 5 уровня. Уровни настраиваются в конфигурации.\n\n---\n\n 3. Можно ли использовать дизельное топливо вместо Low Grade?\n\nДа. Карьер принимает дизельное топливо и Low Grade Fuel. Скорость работы различается в зависимости от типа топлива (настраивается в конфигурации).\n\n---\n\n 4. Как перезагрузить конфигурацию без перезапуска?\n\nВыполните консольную команду: ql reload.\n\n---\n\n 5. Работает ли система с насосными станциями?\n\nДа. Насосные станции (Pumpjack) имеют собственные максимальные уровни и настройки ёмкости.\n\n---\n\n Решение проблем\n\n Кнопка \"Upgrade\" не появляется\n\nПричина: У игрока нет права quarrylevels.use.\n\nРешение: Выдайте право: oxide.grant group default quarrylevels.use.\n\n---\n\n Сообщение \"You cannot afford this upgrade\"\n\nПричина: У игрока нет карьера в инвентаре или недостаточно средств на балансе Economics/ServerRewards.\n\nРешение: Убедитесь, что игрок имеет 1 карьер (Mining Quarry) без скина в инвентаре. Или пополните его баланс экономики.\n\n---\n\n Карьер показывает максимальный уровень\n\nПричина: Карьер уже достиг максимального уровня.\n\nРешение: Увеличьте значение \"Quarry max level\" в конфигурации, если нужны дополнительные уровни."
+  },
+  {
+    "id": "chunk-240",
+    "plugin": "quarry-levels",
+    "page": "обзор",
+    "section": "Quarry Levels",
+    "source": "docs/plugins/quarry-levels/index.mdx",
+    "url": "/plugins/quarry-levels/",
+    "content": "Quarry Levels\n\n Что делает этот плагин?\n\nQuarry Levels добавляет систему прокачки (улучшения) для карьеров (Mining Quarry) и насосных станций (Pumpjack). Игроки могут улучшать свои карьеры, увеличивая производительность, ёмкость хоппера и разблокируя новые ресурсы (металл, серу, HQM). Улучшение стоит дополнительный карьер/насосную станцию или валюту (Economics/ServerRewards). Поддерживается визуальный интерфейс с информацией об уровне.\n\n Ключевые возможности\n\n- Прокачка карьеров и насосных станций до максимального уровня\n- Разблокировка новых ресурсов на определённых уровнях (металл, сера, HQM)\n- Увеличение ёмкости хоппера с каждым уровнем\n- Оплата улучшения карьером или валютой (Economics, ServerRewards)\n- Визуальный интерфейс с информацией о текущем и следующем уровне\n- Защита от неавторизованных игроков (запрет открытия и переключения)\n- Настраиваемая скорость работы с разными видами топлива (дизель, Low Grade)\n- Шанс появления нефтяных кратеров от Survey Charge\n- Поддержка права доступа для использования системы прокачки\n\n Требования\n\n Зависимость  Обязательность  Описание \n---------\n Economics  По желанию  Оплата улучшений валютой \n ServerRewards  По желанию  Оплата улучшений очками \n Oxide / uMod / Carbon  Обязательно  Совместим с Oxide, uMod и Carbon \n\n Быстрый старт\n\n1. Скопируйте файл QuarryLevels.cs в папку oxide/plugins/.\n2. Перезагрузите сервер или выполните oxide.reload QuarryLevels.\n3. Выдайте право: oxide.grant group default quarrylevels.use.\n4. Откройте карьер -- появится кнопка \"Upgrade\"."
+  },
+  {
+    "id": "chunk-241",
+    "plugin": "quarry-levels",
+    "page": "установка",
+    "section": "Установка Quarry Levels",
+    "source": "docs/plugins/quarry-levels/setup.mdx",
+    "url": "/plugins/quarry-levels/setup",
+    "content": "Установка Quarry Levels\n\n Шаг 1: Установите плагин\n\n1. Скопируйте файл QuarryLevels.cs в папку oxide/plugins/.\n2. Плагин загрузится автоматически.\n\nФайл конфигурации:\n\n Шаг 2: Настройте права доступа\n\n Шаг 3: Установите зависимости (по желанию)\n\n Плагин  Назначение \n------\n Economics  Оплата улучшений валютой \n ServerRewards  Оплата улучшений очками наград \n\nЕсли хотите использовать экономику вместо предметов:\n\n Шаг 4: Проверьте работу\n\n1. Разместите карьер (Mining Quarry).\n2. Откройте его (нажмите E).\n3. Вы увидите кнопку \"Upgrade\" в интерфейсе.\n4. Нажмите \"Upgrade\" -- откроется панель с информацией об уровне.\n5. Подтвердите улучшение (стоимость: 1 карьер или валюта).\n\n Шаг 5: Настройте конфигурацию\n\nОткройте oxide/config/QuarryLevels.json:\n\n Основные параметры\n\n- Quarry max level -- максимальный уровень карьера (по умолчанию 5)\n- Pumpjack max level -- максимальный уровень насосной станции\n- Quarry capacity per level -- прибавка ёмкости за уровень\n- Deposit Settings -- уровни разблокировки ресурсов\n\n Шаг 6: Перезагрузите плагин"
+  }
+]

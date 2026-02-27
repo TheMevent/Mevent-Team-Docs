@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chunk-162",
+    "plugin": "multi-events-npc-missile-silo",
+    "page": "команды",
+    "section": "Команды и права — NPC Missile Silo",
+    "source": "docs/plugins/multi-events-npc-missile-silo/commands.mdx",
+    "url": "/plugins/multi-events-npc-missile-silo/commands",
+    "content": "Команды и права доступа\n\n Консольные команды\n\n Команда  Описание  Право доступа \n---------\n npcmissilesilo.start  Запуск ивента вручную  MultiEventsNpcMissileSilo.start \n npcmissilesilo.stop  Остановка текущего ивента  MultiEventsNpcMissileSilo.stop \n\n Права доступа (Permissions)\n\n Право  Описание \n------\n MultiEventsNpcMissileSilo.start  Разрешение на запуск ивента \n MultiEventsNpcMissileSilo.stop  Разрешение на остановку ивента \n\n Назначение прав\n\n Управление UI\n\nИгроки могут скрыть виджет ивента, нажав кнопку закрытия на панели уведомления."
+  },
+  {
+    "id": "chunk-163",
+    "plugin": "multi-events-npc-missile-silo",
+    "page": "настройки",
+    "section": "Конфигурация — NPC Missile Silo",
+    "source": "docs/plugins/multi-events-npc-missile-silo/configuration.mdx",
+    "url": "/plugins/multi-events-npc-missile-silo/configuration",
+    "content": "Конфигурация NPC Missile Silo\n\nФайл конфигурации создаётся автоматически при первой загрузке плагина.\n\n Основные параметры\n\n Work with Notify?\n\nВключает или отключает интеграцию с плагинами Notify / UINotify.\n\n Event Duration\n\nДлительность ивента в секундах.\n\n Настройки наград (Awards Settings)\n\nНаграды настраиваются для каждого призового места отдельно.\n\n Структура награды\n\n Параметр  Описание \n------\n Inventory Awards  Индексы ячеек в инвентаре Multi Events \n Amount (min/max)  Количество наград для выдачи \n Awards  Список возможных наград \n\n Типы наград\n\n Тип  Описание \n------\n Item  Игровой предмет (ShortName, количество, скин) \n Command  Консольная команда (поддержка %steamid%) \n Kit  Набор из плагина Kits \n Plugin  Вызов стороннего плагина (Economics, ServerRewards и др.) \n\n Пример настройки предмета\n\n Put In Events Inventory\n\nОпределяет, будут ли награды помещены в инвентарь Multi Events."
+  },
+  {
+    "id": "chunk-164",
+    "plugin": "multi-events-npc-missile-silo",
+    "page": "FAQ",
+    "section": "FAQ — NPC Missile Silo",
+    "source": "docs/plugins/multi-events-npc-missile-silo/faq.mdx",
+    "url": "/plugins/multi-events-npc-missile-silo/faq",
+    "content": "Часто задаваемые вопросы\n\n Общие вопросы\n\n Нужен ли Multi Events для работы этого режима?\n\nДа, Multi Events является обязательной зависимостью. NPC Missile Silo — это режим расширения из Expansion Pack 1.\n\n Нужна ли на карте ракетная шахта?\n\nДа, для полноценной работы режима на карте должен присутствовать монумент «Ракетная шахта» (Missile Silo) с NPC-учёными.\n\n Сколько длится ивент?\n\nПо умолчанию 10 минут (600 секунд). Значение настраивается через параметр Event Duration.\n\n Настройка\n\n Как настроить награды?\n\nВ разделе Awards Settings конфигурации задайте награды для каждого призового места. Поддерживаются предметы, команды, наборы Kit и вызовы сторонних плагинов.\n\n Можно ли добавить больше призовых мест?\n\nДа, добавьте новые записи с номерами мест (3, 4, 5 и т.д.) в раздел Awards Settings.\n\n Проблемы\n\n Очки не начисляются за убийство учёных\n\nУбедитесь, что ивент активен и на карте есть ракетная шахта с NPC. Очки начисляются только за учёных, находящихся в зоне ракетной шахты.\n\n UI не отображается\n\nПроверьте корректную работу ImageLibrary и его наличие на сервере."
+  },
+  {
+    "id": "chunk-165",
+    "plugin": "multi-events-npc-missile-silo",
+    "page": "обзор",
+    "section": "NPC Missile Silo — Multi Events",
+    "source": "docs/plugins/multi-events-npc-missile-silo/index.mdx",
+    "url": "/plugins/multi-events-npc-missile-silo/",
+    "content": "NPC Missile Silo\n\n Что делает этот режим?\n\nNPC Missile Silo — это режим ивента для Multi Events, в котором игроки отправляются к ракетной шахте и уничтожают элитных учёных, охраняющих комплекс. Каждый убитый учёный приносит очки, а игрок с наибольшим количеством очков по окончании таймера получает эксклюзивные награды.\n\n Ключевые возможности\n\n- Соревновательная охота на NPC-учёных в зоне ракетной шахты\n- Таблица лидеров в режиме реального времени\n- Гибкая система наград для нескольких призовых мест\n- Поддержка уведомлений через Notify и UINotify\n- Встроенный UI-виджет с обратным отсчётом\n- Интеграция с Multi Events Inventory и Leaderboard\n\n Требования\n\n Зависимость  Обязательно? \n------\n Multi Events  Да \n ImageLibrary  Да \n Multi Events Inventory  Рекомендуется \n Multi Events Leaderboard  Рекомендуется \n Notify / UINotify  Опционально \n\n Быстрый старт\n\n1. Установите Multi Events на сервер\n2. Поместите файл режима NPC Missile Silo в папку oxide/plugins\n3. Перезагрузите сервер или загрузите плагин\n4. Настройте награды в конфигурации при необходимости\n5. Ивент готов к запуску через Multi Events или вручную командой\n\n Как проходит ивент\n\n1. Ивент запускается автоматически через Multi Events или вручную\n2. На экране всех игроков появляется UI-виджет с информацией и таймером\n3. Игроки отправляются к ракетной шахте и уничтожают NPC-учёных\n4. За каждого убитого учёного начисляются очки\n5. Таблица лидеров обновляется в реальном времени\n6. По истечении таймера победители получают награды\n\n Настройки\n\n Параметр  Описание  По умолчанию \n---------\n Work with Notify?  Использовать ли плагин Notify для уведомлений  true \n Event Duration  Длительность ивента в секундах  600 \n Awards Settings  Настройки наград для каждого места  Предметы для 1-3 мест \n\n Устранение неполадок\n\n Проблема  Решение \n------\n Ивент не запускается  Убедитесь, что Multi Events установлен и загружен \n Очки не начисляются  Проверьте, что на карте присутствует ракетная шахта с учёными \n Нет UI-уведомлений  Про"
+  },
+  {
+    "id": "chunk-166",
+    "plugin": "multi-events-npc-missile-silo",
+    "page": "установка",
+    "section": "Установка — NPC Missile Silo",
+    "source": "docs/plugins/multi-events-npc-missile-silo/setup.mdx",
+    "url": "/plugins/multi-events-npc-missile-silo/setup",
+    "content": "Установка NPC Missile Silo\n\n Предварительные требования\n\nПеред установкой убедитесь, что на сервере установлены:\n\n- Multi Events — основной плагин (обязательно)\n- ImageLibrary — для отображения UI-элементов (обязательно)\n\n Рекомендуемые плагины\n\n- Multi Events Inventory — для хранения наград в инвентаре ивентов\n- Multi Events Leaderboard — для расширенной таблицы лидеров\n- Notify или UINotify — для внутриигровых уведомлений\n\n Пошаговая установка\n\n Шаг 1. Загрузка\n\nЗагрузите файл режима NPC Missile Silo из комплекта Expansion Pack 1.\n\n Шаг 2. Размещение файла\n\nСкопируйте файл плагина в папку:\n\n Шаг 3. Загрузка плагина\n\nПлагин загрузится автоматически. Если сервер уже запущен:\n\n Шаг 4. Проверка\n\nПосле загрузки:\n\n1. Файл конфигурации появится в oxide/config/\n2. Режим зарегистрируется в Multi Events автоматически\n3. Ивент станет доступен для запуска\n\n Шаг 5. Настройка\n\nОткройте конфигурацию и настройте награды и длительность ивента. После изменений перезагрузите плагин.\n\n Проверка работоспособности\n\nЗапустите ивент вручную:\n\nУбедитесь, что UI-виджет отображается и очки начисляются за убийство учёных в зоне ракетной шахты.\n\nДля остановки:"
+  }
+]

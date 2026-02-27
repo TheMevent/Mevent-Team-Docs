@@ -1,0 +1,47 @@
+[
+  {
+    "id": "chunk-307",
+    "plugin": "virtual-recycler",
+    "page": "команды",
+    "section": "Команды и права",
+    "source": "docs/plugins/virtual-recycler/commands.mdx",
+    "url": "/plugins/virtual-recycler/commands",
+    "content": "Команды и права\n\n Команды чата\n\n Команда  Описание  Право \n---------\n /vrec  Открыть виртуальный переработчик  virtualrecycler.use \n /vr  Короткая команда  virtualrecycler.use \n /virtualrec  Полная команда  virtualrecycler.use \n /vrecycler  Альтернативная команда  virtualrecycler.use \n /virtualrecycler  Полная альтернативная команда  virtualrecycler.use \n\n Права (Permissions)\n\n Право на использование\n\n Право  Описание \n------\n virtualrecycler.use  Базовое право для использования виртуального переработчика \n virtualrecycler.raidablebases  Право для использования в зонах RaidableBases \n\n Права скорости (PermissionSpeeds)\n\nОпределяют скорость работы виртуального переработчика:\n\n Право  Скорость  Описание \n---------\n virtualrecycler.admin  0.1  Очень быстрая переработка \n virtualrecycler.vip  0.5  Ускоренная переработка \n virtualrecycler.raidablebases  0.5  Скорость в RaidableBases \n\n Права скорости стационарных переработчиков (StaticRecyclerSpeeds)\n\nОпределяют скорость для стационарных переработчиков на карте:\n\n Право  Скорость \n------\n virtualrecycler.static1  1.0 \n virtualrecycler.static2  0.5 \n virtualrecycler.vipstatic  0.1"
+  },
+  {
+    "id": "chunk-308",
+    "plugin": "virtual-recycler",
+    "page": "настройки",
+    "section": "Конфигурация Virtual Recycler",
+    "source": "docs/plugins/virtual-recycler/configuration.mdx",
+    "url": "/plugins/virtual-recycler/configuration",
+    "content": "Конфигурация Virtual Recycler\n\nФайл конфигурации расположен по пути: oxide/config/VirtualRecycler.json\n\n Основные параметры\n\n Параметр  По умолчанию  Описание \n---------\n Work with Notify?  false  Использовать Notify для уведомлений \n Commands  [\"vrec\", \"vr\", \"virtualrec\", \"vrecycler\", \"virtualrecycler\"]  Чат-команды для открытия \n DefaultPermission  \"virtualrecycler.use\"  Право по умолчанию для использования \n DefaultSpeed  1.0  Скорость переработки по умолчанию \n AutoStart  false  Автозапуск переработчика при открытии \n\n Скорость переработки\n\n Как работает скорость\n\nЗначение скорости определяет интервал между тактами переработки:\n\n Значение  Описание \n------\n 1.0  Стандартная скорость (как обычный переработчик) \n 0.5  В 2 раза быстрее \n 0.1  В 10 раз быстрее \n\n Скорости по правам (PermissionSpeeds)\n\nКаждая запись определяет скорость для игроков с данным правом. При наличии нескольких прав используется наименьшее значение.\n\n Скорости стационарных переработчиков (StaticRecyclerSpeeds)\n\nЭти права применяются к стационарным переработчикам на карте (не виртуальным).\n\n Полная конфигурация по умолчанию"
+  },
+  {
+    "id": "chunk-309",
+    "plugin": "virtual-recycler",
+    "page": "FAQ",
+    "section": "FAQ и решение проблем",
+    "source": "docs/plugins/virtual-recycler/faq.mdx",
+    "url": "/plugins/virtual-recycler/faq",
+    "content": "FAQ и решение проблем\n\n Частые вопросы\n\n 1. Куда деваются предметы при закрытии переработчика?\n\nПри закрытии виртуального переработчика все оставшиеся предметы автоматически возвращаются в инвентарь игрока. Если инвентарь полон, предметы выпадают на землю.\n\n---\n\n 2. Можно ли сделать автозапуск переработчика?\n\nДа. Установите \"AutoStart\": true в конфигурации. Переработчик начнёт работу автоматически при добавлении предметов.\n\n---\n\n 3. Как ускорить переработку для VIP-игроков?\n\nДобавьте новое право в \"PermissionSpeeds\" с меньшим значением скорости (например, 0.3) и выдайте это право VIP-группе.\n\n---\n\n 4. Работает ли плагин со стационарными переработчиками?\n\nДа. Секция \"StaticRecyclerSpeeds\" позволяет задавать скорость переработки для стационарных переработчиков на карте.\n\n---\n\n 5. Можно ли использовать виртуальный переработчик в зонах RaidableBases?\n\nДа. Для этого нужно выдать право virtualrecycler.raidablebases и убедиться, что плагин RaidableBases установлен.\n\n---\n\n Решение проблем\n\n Сообщение \"У вас нет права\"\n\nПричина: У игрока нет права virtualrecycler.use.\n\nРешение: Выдайте право: oxide.grant group default virtualrecycler.use.\n\n---\n\n Переработчик работает слишком медленно\n\nПричина: Для игрока используется стандартная скорость (1.0).\n\nРешение: Выдайте право с ускоренной скоростью (например, virtualrecycler.vip = 0.5) или измените \"DefaultSpeed\" в конфигурации.\n\n---\n\n Предметы пропадают при переработке\n\nПричина: Это нормальное поведение переработчика -- не все предметы имеют рецепт переработки.\n\nРешение: Убедитесь, что предметы поддерживают переработку. Проверьте, что инвентарь не переполнен."
+  },
+  {
+    "id": "chunk-310",
+    "plugin": "virtual-recycler",
+    "page": "обзор",
+    "section": "Virtual Recycler",
+    "source": "docs/plugins/virtual-recycler/index.mdx",
+    "url": "/plugins/virtual-recycler/",
+    "content": "Virtual Recycler\n\n Что делает этот плагин?\n\nVirtual Recycler позволяет игрокам открывать переработчик (Recycler) через чат-команду в любом месте, без необходимости искать стационарный переработчик на карте. Игрок вводит команду, перед ним появляется виртуальный переработчик, который можно использовать как обычный. Скорость переработки настраивается через систему прав, что позволяет создавать VIP-уровни с ускоренной переработкой.\n\n Ключевые возможности\n\n- Открытие виртуального переработчика через чат-команду\n- Настраиваемая скорость переработки для каждого права\n- VIP-система с ускоренной переработкой\n- Автозапуск переработчика при открытии (опционально)\n- Автоматический возврат предметов при закрытии\n- Отдельные скорости для стационарных переработчиков\n- Поддержка Notify для уведомлений\n- Интеграция с RaidableBases (право для использования в RaidableBases)\n\n Требования\n\n Зависимость  Обязательность  Описание \n---------\n Notify / UINotify  По желанию  Уведомления \n RaidableBases  По желанию  Интеграция с рейдовыми базами \n Oxide / uMod / Carbon  Обязательно  Совместим с Oxide, uMod и Carbon \n\n Быстрый старт\n\n1. Скопируйте файл VirtualRecycler.cs в папку oxide/plugins/.\n2. Перезагрузите сервер или выполните oxide.reload VirtualRecycler.\n3. Выдайте право: oxide.grant group default virtualrecycler.use.\n4. Введите /vrec в чат для открытия виртуального переработчика."
+  },
+  {
+    "id": "chunk-311",
+    "plugin": "virtual-recycler",
+    "page": "установка",
+    "section": "Установка Virtual Recycler",
+    "source": "docs/plugins/virtual-recycler/setup.mdx",
+    "url": "/plugins/virtual-recycler/setup",
+    "content": "Установка Virtual Recycler\n\n Шаг 1: Установите плагин\n\n1. Скопируйте файл VirtualRecycler.cs в папку oxide/plugins/.\n2. Плагин загрузится автоматически.\n\nФайл конфигурации:\n\n Шаг 2: Настройте права доступа\n\n Базовое право\n\n VIP-права с ускоренной переработкой\n\n Права для стационарных переработчиков\n\n Шаг 3: Настройте конфигурацию\n\nОткройте oxide/config/VirtualRecycler.json:\n\n Шаг 4: Проверьте работу\n\n1. Зайдите на сервер с правом virtualrecycler.use.\n2. Введите /vrec в чат.\n3. Перед вами откроется виртуальный переработчик.\n4. Положите предметы для переработки.\n\n Шаг 5: Перезагрузите плагин"
+  }
+]

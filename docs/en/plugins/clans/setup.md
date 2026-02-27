@@ -154,5 +154,5 @@ Perform the following checks:
 3. Test the admin commands: `clans.manage list`
 
 :::tip Next Step
-After successful installation, proceed to the [detailed configuration guide](/docs/plugins/clans/configuration).
+After successful installation, proceed to the [detailed configuration guide](/en/plugins/clans/configuration).
 :::

@@ -442,7 +442,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/TheMevent/Mevent-Team-Plugins' },
+      { icon: 'github', link: 'https://github.com/TheMevent/Mevent-Team-Docs' },
     ],
   },
 })
